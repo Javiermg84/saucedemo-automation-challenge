@@ -1,4 +1,4 @@
-import Login from "pageObjects/loginPage";
+import Login from "../pageObjects/loginPage";
 
 describe('pom', () => {
 
