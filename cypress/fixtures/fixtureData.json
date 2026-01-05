@@ -4,6 +4,8 @@
   "username_invalid": "invaliduser",
   "password_invalid": "invalidpassword",
   "title_verification": "Products", 
-  "login_error_message": "Epic sadface: Username and password do not match any user in this service"
+  "login_error_message": "Epic sadface: Username and password do not match any user in this service",
+  "txtBackpack": "Sauce Labs Backpack",
+  "txtTshirt": "Sauce Labs Bolt T-Shirt"
  
 }

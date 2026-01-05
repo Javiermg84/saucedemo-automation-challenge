@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-01-05T01:29:26.355Z",
+    "end": "2026-01-05T01:29:34.909Z",
+    "duration": 8554,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "85512bd0-9c09-4e24-9e07-689ee3b0d441",
+      "title": "",
+      "fullFile": "cypress\\e2e\\cartTest.cy.js",
+      "file": "cypress\\e2e\\cartTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2afc5f37-a1f1-482f-b5b2-88bf182f55a6",
+          "title": "cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify_cart",
+              "fullTitle": "cart verify_cart",
+              "timedOut": null,
+              "duration": 6938,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('fixtureData').then(data => {\n  const login = new _loginPage.default();\n  const products = new _productsPage.default();\n  const cart = new _cartPage.default();\n  cy.visit(\"https://www.saucedemo.com/\");\n  login.setUserName(data.username_valid);\n  login.setPassword(data.password_valid);\n  login.clickLogin();\n  products.chooseProducts();\n  products.clickToCartIcon();\n  cart.verifyItemsInCart(data.txtBackpack, data.txtTshirt);\n  cart.removeItemsFromCart();\n  cart.verifyItemIsRemoved(cart.cartItemName1);\n  cart.proceedToCheckout();\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<a#item_4_title_link>' to have text undefined, but the text was 'Sauce Labs Backpack'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<a#item_4_title_link>' to have text undefined, but the text was 'Sauce Labs Backpack'\n    at cart.verifyItemsInCart (webpack://cypress-test-inhabit/./cypress/pageObjects/cartPage.js:18:35)\n    at Context.eval (webpack://cypress-test-inhabit/./cypress/e2e/cartTest.cy.js:22:13)\n    at getRet (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:122653:20)\n    at tryCatcher (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:122664:66)\n    at Context.then (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:122915:21)\n    at wrapped (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:146027:19)",
+                "diff": null
+              },
+              "uuid": "f3ed3fd8-6cef-4857-9c54-72f89d5cef71",
+              "parentUUID": "2afc5f37-a1f1-482f-b5b2-88bf182f55a6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f3ed3fd8-6cef-4857-9c54-72f89d5cef71"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6938,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
