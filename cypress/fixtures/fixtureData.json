@@ -6,6 +6,10 @@
   "title_verification": "Products", 
   "login_error_message": "Epic sadface: Username and password do not match any user in this service",
   "txtBackpack": "Sauce Labs Backpack",
-  "txtTshirt": "Sauce Labs Bolt T-Shirt"
+  "txtTshirt": "Sauce Labs Bolt T-Shirt",
+  "firstName": "John",
+  "lastName": "Wick",
+  "postalCode": "12345",
+  "expectedMessage": "Thank you for your order!"
  
 }
