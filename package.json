@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@cypress/grep": "^5.0.1",
     "cypress": "^15.8.1",
     "mochawesome": "^7.1.4",
     "mochawesome-merge": "^5.1.0",

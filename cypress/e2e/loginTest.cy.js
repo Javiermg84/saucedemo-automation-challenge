@@ -20,7 +20,7 @@ describe('pom', () => {
     })
 
 
-    it('Login-Test' , () => {   
+    it('Login-Test (smoke)' , () => {   
         cy.visit("https://www.saucedemo.com/")
 
         cy.fixture('fixtureData').then((data) => {
